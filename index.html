@@ -1,62 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- 标题 -->
-    <title>黄福明 - 个人简历</title>
+    <head>
+        <!-- 标题 -->
+        <title>黄福明 - Java 开发工程师 - 13758860183</title>
 
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
-    <!-- 图标-->
-    <link rel="shortcut icon" href="https://hfm-resume.oss-cn-hangzhou.aliyuncs.com/%E5%9B%BE%E6%A0%87.jpg">
+        <!-- Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="黄福明,简历">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="author" content="hfm">
+        <!-- 图标-->
+        <link rel="shortcut icon" href="https://hfm-resume.oss-cn-hangzhou.aliyuncs.com/%E5%9B%BE%E6%A0%87.jpg">
 
-    <!-- Google Fonts -->
-    <!-- fonts.googleapis.com 替换为 fonts.useso.com, 另外 http://libs.useso.com/ 是360常用前端公共库CDN服务-->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+        <!-- Google Fonts -->
+        <!-- fonts.googleapis.com 替换为 fonts.useso.com, 另外 http://libs.useso.com/ 是360常用前端公共库CDN服务-->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
 
-    <!-- FontAwesome JS-->
-    <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
-            integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
-            crossorigin="anonymous"></script>
-
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
-
-</head>
-
-<body>
-
-<!--<div class="demo-banner px-2 py-3 text-white text-center font-weight-bold bg-primary">Want a professional Bootstrap 4 vcard & portfolio template </a>
-</div> -->
-
-<div class="main-wrapper">
-
-    <div class="container px-3 px-lg-5">
-
-        <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-        <script type="text/javascript" src="js/FileSaver.js"></script>
-        <script type="text/javascript" src="js/jquery.wordexport.js"></script>
-        <script>
-            $(function exportWord() {
-                $("input[type='button']").click(function (event) {
-                    $(".word").wordExport('黄福明 - 个人简历');
-                });
-            })
+        <!-- FontAwesome JS-->
+        <script defer src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"
+                integrity="sha384-g5uSoOSBd7KkhAMlnQILrecXvzst9TdC09/VM+pjDTCM+1il8RHz5fKANTFFb+gQ"
+                crossorigin="anonymous">
         </script>
 
-        <button type="button" class="btn btn-primary">
-            <a href=" https://www.hfming.com" style="color: #ffffff">博客首页</a>
-        </button>
+        <!-- 打印输出 PDF 方法 1 -->
+        <!-- JsPDF 实现 HTML 到 PDF 输出-->
+        <!-- <script type="text/javascript"  src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script> 
+        <script type="text/javascript" src="./js/jQuery.print.js"></script> 
+        <script type="text/javascript" src="https://www.jq22.com/jquery/jquery-migrate-1.2.1.min.js"></script>
+        <script type="text/javascript">
+            function  jquery_print_pdf(){
+                    $("#resume").print({
+                        //debug: false, //如果是true则可以显示iframe查看效果（iframe默认高和宽都很小，可以再源码中调大），默认是false
+                        importCSS: true, //true表示引进原来的页面的css，默认是true。（如果是true，先会找$("link[media=print]")，若没有会去找$("link")中的css文件）
+                        //printContainer: true, //表示如果原来选择的对象必须被纳入打印（注意：设置为false可能会打破你的CSS规则）。
+                        //operaSupport: true,//表示如果插件也必须支持歌opera浏览器，在这种情况下，它提供了建立一个临时的打印选项卡。默认是true
+                       
+                        //targetStyles: ['*'],
+                        //targetStyle: ['*'],
+                        globalStyles:true,//是否包含父文档的样式，默认为true
+                        //mediaPrint:false,//是否包含media='print'的链接标签。会被globalStyles选项覆盖，默认为false
+                        //stylesheet:'./assets/css/print.min.css',//外部样式表的URL地址，默认为null
 
-        <input type="button" class="btn btn-primary" id="make" onclick="exportWord()" value="Word 版下载">
+                        //noPrintSelector:".no-print",//不想打印的元素的jQuery选择器，默认为".no-print"
+                        //iframe:true,//是否使用一个iframe来替代打印表单的弹出窗口，true为在本页面进行打印，false就是说新开一个页面打印，默认为true
+                        //append:null,//将内容添加到打印内容的后面
+                        //prepend:null,//将内容添加到打印内容的前面，可以用来作为要打印内容
+                        //deferred:$.Deferred()//回调函数
+                    });
+                }
+        </script> -->
+        
+        <!-- 打印输出 PDF 方法 2 -->
+        <!-- JsPDF 实现 HTML 到 PDF 输出-->
+        <!-- 导出为图片 PDF ,并且直接下载,不推荐使用-->
+        <!-- <script type="text/javascript" src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+        <script type="text/javascript" src="https://cdn.bootcss.com/jspdf/1.3.5/jspdf.debug.js"></script>
 
-		<input type="button" class="btn btn-primary" id="make" onclick="exportWord()" value="PDF 版下载">
+        <script type="text/javascript">
+            function js_pdf() {
+                    $("img").each(function(index){
+		                $(this).attr("crossorigin","anonymous");
+                    });
+                    
+                    var element = document.getElementById("resume");    // 这个dom元素是要导出pdf的div容器
+            
+                    var w = element.width;    // 获得该容器的宽
+                    var h = element.height;    // 获得该容器的高
+                    var offsetTop = element.offsetTop;    // 获得该容器到文档顶部的距离
+                    var offsetLeft = element.offsetLeft;    // 获得该容器到文档最左的距离
+                    var canvas = document.createElement("canvas");
+                    var abs = 0;
+                    var win_i = window.width;    // 获得当前可视窗口的宽度（不包含滚动条）
+                    var win_o = window.innerWidth;    // 获得当前窗口的宽度（包含滚动条）
+                    if(win_o>win_i){
+                        abs = (win_o - win_i)/2;    // 获得滚动条长度的一半
+                    }
+                    canvas.width = w * 2;    // 将画布宽&&高放大两倍
+                    canvas.height = h * 2;
+                    var context = canvas.getContext("2d");
+                    context.scale(2, 2);
+                    context.translate(-offsetLeft-abs,-offsetTop);    
+                    // 这里默认横向没有滚动条的情况，因为offset.left(),有无滚动条的时候存在差值，因此        
+                    // translate的时候，要把这个差值去掉
+                    window.scrollTo(0,$(this).offsetTop);//最为关键的地方 需要滚动到指定标签  否则图片不全
 
-        <div id="export_word">
-            <article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg">
+                    html2canvas(element, {
+                        allowTaint: false,
+                        taintTest: false,
+                        // 设置 PDF 文档背景颜色, 默认为黑色
+                        dpi: 192, // 提升画面质量，但是会增加文件大小
+                        background: "#FFFFFF",
+                        
+                        logging: false, 
+                        targetStyles: ['*'],
+
+                        debug: false, //如果是true则可以显示iframe查看效果（iframe默认高和宽都很小，可以再源码中调大），默认是false
+                        importCSS: true, //true表示引进原来的页面的css，默认是true。（如果是true，先会找$("link[media=print]")，若没有会去找$("link")中的css文件）
+                        printContainer: true, //表示如果原来选择的对象必须被纳入打印（注意：设置为false可能会打破你的CSS规则）。
+                        operaSupport: true,//表示如果插件也必须支持歌opera浏览器，在这种情况下，它提供了建立一个临时的打印选项卡。默认是true
+                        
+                        globalStyles:true,//是否包含父文档的样式，默认为true
+                        mediaPrint:false,//是否包含media='print'的链接标签。会被globalStyles选项覆盖，默认为false
+                        stylesheet:'./assets/css/print.min.css',//外部样式表的URL地址，默认为null
+
+                        noPrintSelector:".no-print",//不想打印的元素的jQuery选择器，默认为".no-print"
+                        iframe:true,//是否使用一个iframe来替代打印表单的弹出窗口，true为在本页面进行打印，false就是说新开一个页面打印，默认为true
+                        append:null,//将内容添加到打印内容的后面
+                        prepend:null,//将内容添加到打印内容的前面，可以用来作为要打印内容
+                        deferred:$.Deferred(),//回调函数
+
+                        scrollY:$(this).offsetTop,
+                        onrendered:function(canvas) {
+                            var fileName = "${submitExperimentFile.studentSubmitter.majorName}${submitExperimentFile.studentSubmitter.className}-${submitExperimentFile.studentSubmitter.username}${submitExperimentFile.studentSubmitter.name}"+"《${submitExperimentFile.experiment.experimentName}》";
+
+                            var contentWidth = canvas.width;
+                            var contentHeight = canvas.height;
+                            //一页pdf显示html页面生成的canvas高度;
+                            var pageHeight = contentWidth / 595.28 * 841.89;
+                            //未生成pdf的html页面高度
+                            var leftHeight = contentHeight;
+                            //pdf页面偏移
+                            var position = 0;
+                            //a4纸的尺寸[595.28,841.89]，html页面生成的canvas在pdf中图片的宽高
+                            var imgWidth = 555.28;
+                            var imgHeight = 555.28/contentWidth * contentHeight;
+                            var pageData = canvas.toDataURL('image/jpeg', 1.0);
+                            var pdf = new jsPDF('p', 'pt', 'a4');
+                            //有两个高度需要区分，一个是html页面的实际高度，和生成pdf的页面高度(841.89)
+                            //当内容未超过pdf一页显示的范围，无需分页
+                            if (leftHeight < pageHeight) {
+                                pdf.addImage(pageData, 'JPEG', 20, 0, imgWidth, imgHeight );
+                            } else {
+                                while(leftHeight > 0) {
+                                    pdf.addImage(pageData, 'JPEG', 20, position, imgWidth, imgHeight)
+                                    leftHeight -= pageHeight;
+                                    position -= 841.89;
+                                    //避免添加空白页
+                                    if(leftHeight > 0) {
+                                        pdf.addPage();
+                                    }
+                                }
+                            }
+                            pdf.save('黄福明 - Java 开发工程师 - 13758860183');
+                        }
+                    });
+          
+            }
+        </script> -->
+
+        <!-- 打印输出 PDF 方法 3 -->
+        <!-- jqprint 实现 HTML 到 PDF 输出-->
+        <!-- 不推荐使用 -->
+        <!-- <script type="text/javascript" src="./js/jquery.jqprint-0.3.js"></script> 
+        <script type="text/javascript">
+            function  jqprint_pdf(){
+                    $("#resume").jqprint({
+                        //debug: false, //如果是true则可以显示iframe查看效果（iframe默认高和宽都很小，可以再源码中调大），默认是false
+                        importCSS: true, //true表示引进原来的页面的css，默认是true。（如果是true，先会找$("link[media=print]")，若没有会去找$("link")中的css文件）
+                        //printContainer: true, //表示如果原来选择的对象必须被纳入打印（注意：设置为false可能会打破你的CSS规则）。
+                        //operaSupport: true,//表示如果插件也必须支持歌opera浏览器，在这种情况下，它提供了建立一个临时的打印选项卡。默认是true
+                       
+                        //targetStyles: ['*'],
+                        //targetStyle: ['*'],
+                        globalStyles:true,//是否包含父文档的样式，默认为true
+                        //mediaPrint:false,//是否包含media='print'的链接标签。会被globalStyles选项覆盖，默认为false
+                        //stylesheet:null,//外部样式表的URL地址，默认为null
+
+                        //noPrintSelector:".no-print",//不想打印的元素的jQuery选择器，默认为".no-print"
+                        //iframe:true,//是否使用一个iframe来替代打印表单的弹出窗口，true为在本页面进行打印，false就是说新开一个页面打印，默认为true
+                        //append:null,//将内容添加到打印内容的后面
+                        //prepend:null,//将内容添加到打印内容的前面，可以用来作为要打印内容
+                        //deferred:$.Deferred()//回调函数
+                    });
+                }
+        </script> -->
+
+        <!-- 打印输出 PDF 方法 4 -->
+        <!-- print 实现 HTML 到 PDF 输出-->
+        <!-- 效果还可以 -->
+        <script type="text/javascript" src="./js/print.min.js"></script> 
+        <link rel="stylesheet" type="text/css" href="./assets/css/print.min.css">
+        <style type="text/css">
+            @page { 
+                size: auto;
+                margin: 0mm; 
+            };
+        </style>
+        <script type="text/javascript" >
+            function Print_PDF(){
+                if(confirm("确认打印 黄福明 - Java 开发工程师 - 13758860183.pdf\r\n注意: 仅 PC 端可用 ! ! !")){
+                    printJS({ printable: 'resume', type: 'html',targetStyles: ['*'],maxWidth: 1600});
+                }
+            };
+        </script>
+
+        <!-- 在线预览 PDF -->
+        <!--在此引入bootstrap只为初始化样式div样式-->
+        <style>
+			.pdfobject-container {
+				height: 800px;
+			}
+			.pdfobject {
+				border: 1px solid #ccc;
+			}
+        </style>
+        <script type="text/javascript" src="./js/pdfobject.js"></script>
+        <script type="text/javascript">
+               // 我的pdf文件放在项目的pdf文件夹下，名字叫做Java.pdf
+                function look_PDF(){
+                    $("#print_pdf").hide();
+                    $("#word").hide();
+                    PDFObject.embed("https://www.hfming.com/web-resume/PDF/黄福明 - Java 开发工程师 - 13758860183.pdf","#container");
+                };
+       </script>
+
+        <!-- 生成 Word 版简历-->
+        <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="./js/FileSaver.js"></script>
+        <script type="text/javascript" src="./js/jquery.wordexport.js"></script>
+        <script type="text/javascript">
+            function exportWord(){  
+                $("#resume").wordExport('黄福明 - Java 开发工程师 - 13758860183');      
+            };
+            // $(function exportWord() {
+            //     $("input[type='button']").click(function (event) {
+            //         $(".word").wordExport('黄福明 - Java 开发工程师 - 13758860183');
+            //     });
+            // });
+        </script>
+        <script type="text/javascript">
+            $(function () {
+                $("input[type='button']").click(function (event) {
+                    $(".resume").wordExport('黄福明 - Java 开发工程师 - 13758860183');
+                });
+            })
+        </script> -->
+        
+        <!-- Theme CSS -->
+        <link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
+    </head>
+
+    <body >
+        <!-- 按钮 -->
+        <div class="container px-3 px-lg-5">
+            <a href=" https://www.hfming.com" class="btn btn-primary" style="color: #ffffff">博客首页</a>
+            <a href=" https://www.hfming.com/web-resume" class="btn btn-primary" style="color: #ffffff">简历主页</a>
+
+            <!-- <input type="button" class="btn btn-primary" id="word" value="生成 Word"> -->
+           
+            <button  class="btn btn-primary" onclick="Print_PDF()" id="print_pdf">打印 PDF</button>
+            <button  class="btn btn-primary" onclick="look_PDF()">预览 PDF</button>
+        </div> <!-- // button-->
+
+         <!-- 简历内容 -->
+        <div class="container px-3 px-lg-5" id="container">
+            <article class="resume-wrapper mx-auto theme-bg-light p-5 mb-5 my-5 shadow-lg" id="resume" >
                 <div class="resume-header">
                     <div class="row align-items-center">
                         <div class="resume-title col-12 col-md-6 col-lg-8 col-xl-9">
@@ -68,25 +266,25 @@
                                 <li class="mb-2"><i class="fas fa-phone-square fa-fw fa-lg mr-2 "></i><a
                                         class="resume-link" href="tel:137 5886 0183">137 5886 0183</a></li>
                                 <li class="mb-2"><i class="fas fa-envelope-square fa-fw fa-lg mr-2"></i><a
-                                        class="resume-link" href="mailto:hfming2016@163.com">hfming2016@163.com</a></li>
-                                <li class="mb-2"><i class="fas fa-globe fa-fw fa-lg mr-2"></i><a class="resume-link"
-                                                                                                 href="https://www.hfming.com">www.hfming.com</a>
+                                        class="resume-link" href="mailto:hfming2016@163.com">hfming2016@163.com</a>
                                 </li>
                                 <li class="mb-2"><i class="fas fa-globe fa-fw fa-lg mr-2"></i><a class="resume-link"
-                                                                                                 href="https://hfming.github.io">hfming.github.io</a>
+                                                                                                    href="https://www.hfming.com">www.hfming.com</a>
+                                </li>
+                                <li class="mb-2"><i class="fas fa-globe fa-fw fa-lg mr-2"></i><a class="resume-link"
+                                                                                                    href="https://hfming.github.io">hfming.github.io</a>
                                 </li>
                                 <li class="mb-0"><i class="fas fa-map-marker-alt fa-fw fa-lg mr-2"></i>温州</li>
                             </ul>
                         </div><!--//resume-contact-->
                     </div><!--//row-->
-
                 </div><!--//resume-header-->
                 <hr>
                 <div class="resume-intro py-3">
                     <div class="media flex-column flex-md-row align-items-center">
                         <img class="resume-profile-image mb-3 mb-md-0 mr-md-5 ml-md-0 rounded mx-auto"
-                             src="https://hfm-resume.oss-cn-hangzhou.aliyuncs.com/%E4%B8%AA%E4%BA%BA%E5%BE%AE%E4%BF%A1%E5%9B%BE%E6%A0%87.png"
-                             alt="image">
+                                src="https://hfm-resume.oss-cn-hangzhou.aliyuncs.com/%E4%B8%AA%E4%BA%BA%E5%BE%AE%E4%BF%A1%E5%9B%BE%E6%A0%87.png"
+                                alt="image">
                         <div class="media-body text-left">
                             <p class="mb-0">这里总结一下你的职业生涯。<a class="theme-link"
                                                             href="#resources/sketch-template/resume-sketch-sketch-resume-template-for-software-developers/"
@@ -95,9 +293,12 @@
                                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
                                 dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
                                 nascetur ridiculus mus.
-                                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Maecenas nec odio
-                                et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis
-                                ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris
+                                Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Maecenas nec
+                                odio
+                                et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam
+                                quis
+                                ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla
+                                mauris
                                 sit amet nibh. </p>
                         </div><!--//media-body-->
                     </div>
@@ -121,8 +322,10 @@
                                         <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing
                                             elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
                                             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
-                                            quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede
-                                            justo, fringilla vel. Lorem ipsum dolor sit amet, consectetuer adipiscing
+                                            quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec
+                                            pede
+                                            justo, fringilla vel. Lorem ipsum dolor sit amet, consectetuer
+                                            adipiscing
                                             elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
                                             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
                                             quam felis.</p>
@@ -146,7 +349,8 @@
                                         <p>Role description goes here ipsum dolor sit amet, consectetuer adipiscing
                                             elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
                                             penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
-                                            quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede
+                                            quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec
+                                            pede
                                             justo, fringilla vel.</p>
                                         <ul class="resume-list">
                                             <li>Lorem ipsum dolor sit amet, consectetuer.</li>
@@ -214,65 +418,68 @@
                                             penatibus. </p>
                                     </div>
                                 </div><!--//item-->
-
+                                <section class="project-section py-3">
+                                    <h3 class="text-uppercase resume-section-heading mb-4">Projects</h3>
+                                    <div class="item mb-3">
+                                        <div class="item-heading row align-items-center mb-2">
+                                            <h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Project Lorem
+                                                Ipsum</h4>
+                                            <div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">
+                                                Open Source
+                                            </div>
+    
+                                        </div>
+                                        <div class="item-content">
+                                            <p>You can use this section for your side projects. You can <a href="#"
+                                                                                                            class="theme-link">provide
+                                                a project link here</a> as well. Lorem ipsum dolor sit amet,
+                                                consectetuer
+                                                adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
+                                                sociis
+                                                natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                                                mus.
+                                            </p>
+    
+    
+                                        </div>
+                                    </div><!--//item-->
+                                    <div class="item">
+                                        <div class="item-heading row align-items-center mb-2">
+                                            <h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Project Sed
+                                                Fringilla</h4>
+                                            <div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">
+                                                Open Source
+                                            </div>
+    
+                                        </div>
+                                        <div class="item-content">
+                                            <p>You can use this section for your side projects. Cras dapibus. Vivamus
+                                                elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
+                                                ligula,
+                                                porttitor eu, consequat vitae, eleifend ac, enim.</p>
+    
+                                        </div>
+                                    </div><!--//item-->
+                                    <div class="item">
+                                        <div class="item-heading row align-items-center mb-2">
+                                            <h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Project
+                                                Praesent </h4>
+                                            <div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">
+                                                Open Source
+                                            </div>
+    
+                                        </div>
+                                        <div class="item-content">
+                                            <p>You can use this section for your side projects. Cras dapibus. Vivamus
+                                                elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
+                                                ligula,
+                                                porttitor eu, consequat vitae, eleifend ac, enim.</p>
+    
+                                        </div>
+                                    </div><!--//item-->
+                                </section><!--//project-section-->
                             </section><!--//work-section-->
 
-
-                            <section class="project-section py-3">
-                                <h3 class="text-uppercase resume-section-heading mb-4">Projects</h3>
-                                <div class="item mb-3">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Project Lorem
-                                            Ipsum</h4>
-                                        <div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">
-                                            Open Source
-                                        </div>
-
-                                    </div>
-                                    <div class="item-content">
-                                        <p>You can use this section for your side projects. You can <a href="#"
-                                                                                                       class="theme-link">provide
-                                            a project link here</a> as well. Lorem ipsum dolor sit amet, consectetuer
-                                            adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
-                                            natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                                        </p>
-
-
-                                    </div>
-                                </div><!--//item-->
-                                <div class="item">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Project Sed
-                                            Fringilla</h4>
-                                        <div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">
-                                            Open Source
-                                        </div>
-
-                                    </div>
-                                    <div class="item-content">
-                                        <p>You can use this section for your side projects. Cras dapibus. Vivamus
-                                            elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-                                            porttitor eu, consequat vitae, eleifend ac, enim.</p>
-
-                                    </div>
-                                </div><!--//item-->
-                                <div class="item">
-                                    <div class="item-heading row align-items-center mb-2">
-                                        <h4 class="item-title col-12 col-md-6 col-lg-8 mb-2 mb-md-0">Project
-                                            Praesent </h4>
-                                        <div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">
-                                            Open Source
-                                        </div>
-
-                                    </div>
-                                    <div class="item-content">
-                                        <p>You can use this section for your side projects. Cras dapibus. Vivamus
-                                            elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-                                            porttitor eu, consequat vitae, eleifend ac, enim.</p>
-
-                                    </div>
-                                </div><!--//item-->
-                            </section><!--//project-section-->
                         </div><!--//resume-main-->
                         <aside class="resume-aside col-12 col-lg-4 col-xl-3 px-lg-4 pb-lg-4">
                             <section class="skills-section py-3">
@@ -350,30 +557,31 @@
                     </div><!--//row-->
                 </div><!--//resume-body-->
                 <hr>
-                <div class="resume-footer text-center">
-                    <ul class="resume-social-list list-inline mx-auto mb-0 d-inline-block text-muted">
-                        <li class="list-inline-item mb-lg-0 mr-3">
-                            <a class="_blank" href="https://github.com/hfming">
-                                <i class="fab fa-github fa-2x mr-2" data-fa-transform="down-4"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item mb-lg-0 mr-3">
-                            <a class="_blank" href="https://www.hfming.com">
-                                <i class="fab fa-wordpress fa-2x mr-2" data-fa-transform="down-4"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item mb-lg-0 mr-3">
-                            <a target="_blank" href="https://www.zhihu.com/people/hfming2016">
-                                <i class="fab fa-zhihu fa-2x mr-2" data-fa-transform="down-4"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div><!--//resume-footer-->
-            </article>
-        </div>
-    </div><!--//container-->
-    <!-- gittalk 评论模块-->
-    <div class="container px-3 px-lg-5">
+            </article> <!-- // resume-wrapper -->
+        </div><!--//container-->
+
+        <div class="resume-footer text-center">
+            <ul class="resume-social-list list-inline mx-auto mb-0 d-inline-block text-muted">
+                <li class="list-inline-item mb-lg-0 mr-3">
+                    <a class="_blank" href="https://github.com/hfming">
+                        <i class="fab fa-github fa-2x mr-2" data-fa-transform="down-4"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mb-lg-0 mr-3">
+                    <a class="_blank" href="https://www.hfming.com">
+                        <i class="fab fa-wordpress fa-2x mr-2" data-fa-transform="down-4"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item mb-lg-0 mr-3">
+                    <a target="_blank" href="https://www.zhihu.com/people/hfming2016">
+                        <i class="fab fa-zhihu fa-2x mr-2" data-fa-transform="down-4"></i>
+                    </a>
+                </li>
+            </ul>
+        </div><!--//resume-footer-->
+
+        <!-- gittalk 评论模块-->
+        <div class="container px-3 px-lg-5">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
         <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
         <div id="gitalk-container"></div>
@@ -389,17 +597,12 @@
             });
             gitalk.render('gitalk-container');
         </script>
-
-        <!-- Gitalk end -->
-
         <!-- disqus 评论框 start -->
         <div class="comment">
             <div id="disqus_thread" class="disqus-thread">
-
             </div>
         </div>
         <!-- disqus 评论框 end -->
-
         <footer class="footer text-center py-4">
             <small class="copyright">备案/许可证编号:浙ICP备18048626号-2 &nbsp;&nbsp;版权所有©2018-2019 黄福明&nbsp;&nbsp;|&nbsp;&nbsp;
                 Theme on <a href="https://github.com/hfming">GitHub</a> |
@@ -412,8 +615,8 @@
                     <image src="https://hfm-wp.oss-cn-hangzhou.aliyuncs.com/%E5%85%AC%E5%AE%89%E7%BD%91%E5%A4%87%E6%A1%88/%E5%A4%87%E6%A1%88%E5%9B%BE%E6%A0%87.png">
                     </image>
                     <a target="_blank"
-                       href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33032702000865"
-                       style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+                        href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33032702000865"
+                        style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
                         <img src="" style="float:left;"/>
                         <p>浙公网安备 33032702000865号
                         </p>
@@ -421,6 +624,6 @@
                 </div>
             </small>
         </footer>
-    </div><!--//main-wrapper-->
-</body>
-</html> 
+    </div>
+    </body>
+</html>

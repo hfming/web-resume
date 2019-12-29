@@ -1,4 +1,3 @@
-﻿
 if (typeof jQuery !== "undefined" && typeof saveAs !== "undefined") {
     (function($) {
         $.fn.wordExport = function(fileName) {
@@ -15,14 +14,14 @@ if (typeof jQuery !== "undefined" && typeof saveAs !== "undefined") {
             };
             // Clone selected element before manipulating it
             var markup = $(this).clone();
-
+ 
             // Remove hidden elements from the output
             markup.each(function() {
                 var self = $(this);
                 if (self.is(':hidden'))
                     self.remove();
             });
-
+ 
             // Embed all images using Data URLs
             var images = Array();
             var img = markup.find('img');
@@ -50,7 +49,7 @@ if (typeof jQuery !== "undefined" && typeof saveAs !== "undefined") {
                     data: uri.substring(uri.indexOf(",") + 1)
                 };
             }
-
+ 
             // Prepare bottom of mhtml file with image data
             var mhtmlBottom = "\n";
             for (var i = 0; i < images.length; i++) {
@@ -61,13 +60,13 @@ if (typeof jQuery !== "undefined" && typeof saveAs !== "undefined") {
                 mhtmlBottom += images[i].data + "\n\n";
             }
             mhtmlBottom += "--NEXT.ITEM-BOUNDARY--";
-
+ 
             //TODO: load css from included stylesheet
             var styles = "";
-
+ 
             // Aggregate parts of the file together
             var fileContent = static.mhtml.top.replace("_html_", static.mhtml.head.replace("_styles_", styles) + static.mhtml.body.replace("_body_", markup.html())) + mhtmlBottom;
-
+ 
             // Create a Blob with the file contents
             var blob = new Blob([fileContent], {
                 type: "application/msword;charset=utf-8"
