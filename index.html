@@ -24,8 +24,8 @@
 
         <!-- 打印输出 PDF 方法 1 -->
         <!-- JsPDF 实现 HTML 到 PDF 输出-->
-        <!-- <script type="text/javascript"  src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script> 
-        <script type="text/javascript" src="./js/jQuery.print.js"></script> 
+        <!-- <script type="text/javascript"  src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+        <script type="text/javascript" src="./js/jQuery.print.js"></script>
         <script type="text/javascript" src="https://www.jq22.com/jquery/jquery-migrate-1.2.1.min.js"></script>
         <script type="text/javascript">
             function  jquery_print_pdf(){
@@ -34,7 +34,7 @@
                         importCSS: true, //true表示引进原来的页面的css，默认是true。（如果是true，先会找$("link[media=print]")，若没有会去找$("link")中的css文件）
                         //printContainer: true, //表示如果原来选择的对象必须被纳入打印（注意：设置为false可能会打破你的CSS规则）。
                         //operaSupport: true,//表示如果插件也必须支持歌opera浏览器，在这种情况下，它提供了建立一个临时的打印选项卡。默认是true
-                       
+
                         //targetStyles: ['*'],
                         //targetStyle: ['*'],
                         globalStyles:true,//是否包含父文档的样式，默认为true
@@ -49,7 +49,7 @@
                     });
                 }
         </script> -->
-        
+
         <!-- 打印输出 PDF 方法 2 -->
         <!-- JsPDF 实现 HTML 到 PDF 输出-->
         <!-- 导出为图片 PDF ,并且直接下载,不推荐使用-->
@@ -61,9 +61,9 @@
                     $("img").each(function(index){
 		                $(this).attr("crossorigin","anonymous");
                     });
-                    
+
                     var element = document.getElementById("resume");    // 这个dom元素是要导出pdf的div容器
-            
+
                     var w = element.width;    // 获得该容器的宽
                     var h = element.height;    // 获得该容器的高
                     var offsetTop = element.offsetTop;    // 获得该容器到文档顶部的距离
@@ -79,8 +79,8 @@
                     canvas.height = h * 2;
                     var context = canvas.getContext("2d");
                     context.scale(2, 2);
-                    context.translate(-offsetLeft-abs,-offsetTop);    
-                    // 这里默认横向没有滚动条的情况，因为offset.left(),有无滚动条的时候存在差值，因此        
+                    context.translate(-offsetLeft-abs,-offsetTop);
+                    // 这里默认横向没有滚动条的情况，因为offset.left(),有无滚动条的时候存在差值，因此
                     // translate的时候，要把这个差值去掉
                     window.scrollTo(0,$(this).offsetTop);//最为关键的地方 需要滚动到指定标签  否则图片不全
 
@@ -90,15 +90,15 @@
                         // 设置 PDF 文档背景颜色, 默认为黑色
                         dpi: 192, // 提升画面质量，但是会增加文件大小
                         background: "#FFFFFF",
-                        
-                        logging: false, 
+
+                        logging: false,
                         targetStyles: ['*'],
 
                         debug: false, //如果是true则可以显示iframe查看效果（iframe默认高和宽都很小，可以再源码中调大），默认是false
                         importCSS: true, //true表示引进原来的页面的css，默认是true。（如果是true，先会找$("link[media=print]")，若没有会去找$("link")中的css文件）
                         printContainer: true, //表示如果原来选择的对象必须被纳入打印（注意：设置为false可能会打破你的CSS规则）。
                         operaSupport: true,//表示如果插件也必须支持歌opera浏览器，在这种情况下，它提供了建立一个临时的打印选项卡。默认是true
-                        
+
                         globalStyles:true,//是否包含父文档的样式，默认为true
                         mediaPrint:false,//是否包含media='print'的链接标签。会被globalStyles选项覆盖，默认为false
                         stylesheet:'./assets/css/print.min.css',//外部样式表的URL地址，默认为null
@@ -144,14 +144,14 @@
                             pdf.save('黄福明 - Java 开发工程师 - 13758860183');
                         }
                     });
-          
+
             }
         </script> -->
 
         <!-- 打印输出 PDF 方法 3 -->
         <!-- jqprint 实现 HTML 到 PDF 输出-->
         <!-- 不推荐使用 -->
-        <!-- <script type="text/javascript" src="./js/jquery.jqprint-0.3.js"></script> 
+        <!-- <script type="text/javascript" src="./js/jquery.jqprint-0.3.js"></script>
         <script type="text/javascript">
             function  jqprint_pdf(){
                     $("#resume").jqprint({
@@ -159,7 +159,7 @@
                         importCSS: true, //true表示引进原来的页面的css，默认是true。（如果是true，先会找$("link[media=print]")，若没有会去找$("link")中的css文件）
                         //printContainer: true, //表示如果原来选择的对象必须被纳入打印（注意：设置为false可能会打破你的CSS规则）。
                         //operaSupport: true,//表示如果插件也必须支持歌opera浏览器，在这种情况下，它提供了建立一个临时的打印选项卡。默认是true
-                       
+
                         //targetStyles: ['*'],
                         //targetStyle: ['*'],
                         globalStyles:true,//是否包含父文档的样式，默认为true
@@ -178,12 +178,12 @@
         <!-- 打印输出 PDF 方法 4 -->
         <!-- print 实现 HTML 到 PDF 输出-->
         <!-- 效果还可以 -->
-        <script type="text/javascript" src="./js/print.min.js"></script> 
+        <script type="text/javascript" src="./js/print.min.js"></script>
         <link rel="stylesheet" type="text/css" href="./assets/css/print.min.css">
         <style type="text/css">
-            @page { 
+            @page {
                 size: auto;
-                margin: 0mm; 
+                margin: 0mm;
             };
         </style>
         <script type="text/javascript" >
@@ -204,6 +204,7 @@
 				border: 1px solid #ccc;
 			}
         </style>
+        <script type="text/javascript"  src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
         <script type="text/javascript" src="./js/pdfobject.js"></script>
         <script type="text/javascript">
                // 我的pdf文件放在项目的pdf文件夹下，名字叫做Java.pdf
@@ -219,8 +220,8 @@
         <script type="text/javascript" src="./js/FileSaver.js"></script>
         <script type="text/javascript" src="./js/jquery.wordexport.js"></script>
         <script type="text/javascript">
-            function exportWord(){  
-                $("#resume").wordExport('黄福明 - Java 开发工程师 - 13758860183');      
+            function exportWord(){
+                $("#resume").wordExport('黄福明 - Java 开发工程师 - 13758860183');
             };
             // $(function exportWord() {
             //     $("input[type='button']").click(function (event) {
@@ -235,7 +236,7 @@
                 });
             })
         </script> -->
-        
+
         <!-- Theme CSS -->
         <link id="theme-style" rel="stylesheet" href="assets/css/devresume.css">
     </head>
@@ -247,9 +248,10 @@
             <a href=" https://www.hfming.com/web-resume" class="btn btn-primary" style="color: #ffffff">简历主页</a>
 
             <!-- <input type="button" class="btn btn-primary" id="word" value="生成 Word"> -->
-           
+
             <button  class="btn btn-primary" onclick="Print_PDF()" id="print_pdf">打印 PDF</button>
             <button  class="btn btn-primary" onclick="look_PDF()">预览 PDF</button>
+
         </div> <!-- // button-->
 
          <!-- 简历内容 -->
@@ -427,7 +429,7 @@
                                             <div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">
                                                 Open Source
                                             </div>
-    
+
                                         </div>
                                         <div class="item-content">
                                             <p>You can use this section for your side projects. You can <a href="#"
@@ -439,8 +441,8 @@
                                                 natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                                                 mus.
                                             </p>
-    
-    
+
+
                                         </div>
                                     </div><!--//item-->
                                     <div class="item">
@@ -450,14 +452,14 @@
                                             <div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">
                                                 Open Source
                                             </div>
-    
+
                                         </div>
                                         <div class="item-content">
                                             <p>You can use this section for your side projects. Cras dapibus. Vivamus
                                                 elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
                                                 ligula,
                                                 porttitor eu, consequat vitae, eleifend ac, enim.</p>
-    
+
                                         </div>
                                     </div><!--//item-->
                                     <div class="item">
@@ -467,14 +469,14 @@
                                             <div class="item-meta col-12 col-md-6 col-lg-4 text-muted text-left text-md-right">
                                                 Open Source
                                             </div>
-    
+
                                         </div>
                                         <div class="item-content">
                                             <p>You can use this section for your side projects. Cras dapibus. Vivamus
                                                 elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo
                                                 ligula,
                                                 porttitor eu, consequat vitae, eleifend ac, enim.</p>
-    
+
                                         </div>
                                     </div><!--//item-->
                                 </section><!--//project-section-->
